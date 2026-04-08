@@ -6,13 +6,14 @@
 }
 
 :root {
-  --cream:   #faf7f2;
-  --sand:    #f0e9de;
-  --gold:    #b8975a;
-  --gold-lt: #d4b483;
-  --text:    #2c2620;
-  --muted:   #7a6e64;
-  --line:    #e0d5c8;
+  --cream:    #faf7f2;
+  --sand:     #f0e9de;
+  --gold:     #876111;  /* 5.2:1 on cream — passes WCAG AA */
+  --gold-mid: #b8975a;  /* decorative only + text on dark bg (7.8:1) */
+  --gold-lt:  #d4b483;  /* decorative only */
+  --text:     #2c2620;
+  --muted:    #635a52;  /* 6.4:1 on cream — passes WCAG AA */
+  --line:     #e0d5c8;
   --dot-size: 14px;
 }
 
@@ -223,9 +224,9 @@ a:hover { border-bottom-color: var(--gold); }
   width: var(--dot-size);
   height: var(--dot-size);
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--gold-mid);
   border: 2px solid var(--cream);
-  outline: 1px solid var(--gold);
+  outline: 1px solid var(--gold-mid);
   flex-shrink: 0;
   margin-top: 4px;
   position: relative;
@@ -245,7 +246,7 @@ a:hover { border-bottom-color: var(--gold); }
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold-lt);
+  color: var(--gold);
   margin-bottom: 0.4rem;
 }
 
@@ -307,7 +308,7 @@ a:hover { border-bottom-color: var(--gold); }
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1rem;
-  color: var(--gold-lt);
+  color: var(--gold-mid);
 }
 
 /* ── Responsive ────────────────────────────────────────────────── */
